@@ -18,7 +18,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
 @slash.slash(
     name="floorfinder",
     description="Finds an OpenSea floor per project",
-    guild_ids=[849034764190875669],
+    guild_ids=[849034764190875669, 859966516761067532],
     options=[
         create_option(
             name="project",
