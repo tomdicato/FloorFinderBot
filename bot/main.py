@@ -5,18 +5,14 @@ from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_choice, create_option
 import requests
 from dotenv import load_dotenv
+import os
 from bs4 import BeautifulSoup
 
 load_dotenv(".env")
 
 client = commands.Bot(command_prefix="!")
 slash = SlashCommand(client, sync_commands=True)
-token = "FLOOR_BOT_TOKEN"
-
-projects = [
-    {"name": "Huas", "value": "chihuahua-gang-revenge"},
-    {"name": "manzcoin-nftz", "value": "manzcoin-nftz"},
-]
+token = os.getenv("FLOOR_BOT_TOKEN")
 
 
 @slash.slash(
