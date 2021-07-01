@@ -18,16 +18,16 @@ token = os.getenv("FLOOR_BOT_TOKEN")
 @slash.slash(
     name="floorfinder",
     description="Finds an OpenSea floor per project",
-    guild_ids=[
-        # Dangywing Test Server
-        849034764190875669,
-        # Dangywing Test II
-        859966516761067532,
-        # club-nfts
-        812365773372129311,
-        # manzcoin-nftz
-        826820629260533790,
-    ],
+    # guild_ids=[
+    #    # Dangywing Test Server
+    #    849034764190875669,
+    #    # Dangywing Test II
+    #    859966516761067532,
+    #    # club-nfts
+    #    812365773372129311,
+    #    # manzcoin-nftz
+    #    826820629260533790,
+    # ],
     options=[
         create_option(
             name="project",
