@@ -41,8 +41,22 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                     name="boring-bananas-company", value="boring-bananas-company"
                 ),
                 create_choice(name="deadheads", value="deadheads"),
+                create_choice(name="craniums", value="thewickedcraniums"),
             ],
-        )
+        ),
+        create_option(
+            name="help",
+            description="help me",
+            required=False,
+            option_type=3,
+            choices=[
+                create_choice(name="Who are you?", value="@DangyWing and @bohz"),
+                create_choice(
+                    name="How do projects get added to the bot?",
+                    value="https://qjdhqvui1g1.typeform.com/to/r8pjwAJm",
+                ),
+            ],
+        ),
     ],
 )
 async def floor_finder(
