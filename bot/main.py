@@ -36,25 +36,20 @@ token = os.getenv("FLOOR_BOT_TOKEN")
             option_type=3,
             choices=[
                 create_choice(name="manzcoin-nftz", value="manzcoin-nftz"),
-                create_choice(name="huas", value="chihuahua-gang-revenge"),
-                create_choice(
-                    name="boring-bananas-company", value="boring-bananas-company"
-                ),
-                create_choice(name="deadheads", value="deadheads"),
+                create_choice(name="BAYC", value="boredapeyachtclub"),
+                create_choice(name="BoringBananas", value="boring-bananas-company"),
+                create_choice(name="bulls", value="bullsontheblock"),
                 create_choice(name="craniums", value="thewickedcraniums"),
-            ],
-        ),
-        create_option(
-            name="help",
-            description="help me",
-            required=False,
-            option_type=3,
-            choices=[
-                create_choice(name="Who are you?", value="@DangyWing and @bohz"),
-                create_choice(
-                    name="How do projects get added to the bot?",
-                    value="https://qjdhqvui1g1.typeform.com/to/r8pjwAJm",
-                ),
+                create_choice(name="deadheads", value="deadheads"),
+                create_choice(name="huas", value="chihuahua-gang-revenge"),
+                create_choice(name="Gutter Cats", value="guttercatgang"),
+                create_choice(name="luckymaneki", value="luckymaneki"),
+                create_choice(name="misfitU", value="misfit-university-official"),
+                create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
+                create_choice(name="svins", value="svinsfarm"),
+                create_choice(name="Theos", value="theo-nft"),
+                create_choice(name="Wizards", value="forgottenruneswizardscult")
+                # Up to 14 choices
             ],
         ),
     ],
