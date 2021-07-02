@@ -36,6 +36,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
             option_type=3,
             choices=[
                 create_choice(name="manzcoin-nftz", value="manzcoin-nftz"),
+                create_choice(name="Aliens", value="thealienboy"),
                 create_choice(name="BAYC", value="boredapeyachtclub"),
                 create_choice(name="BoringBananas", value="boring-bananas-company"),
                 create_choice(name="bulls", value="bullsontheblock"),
@@ -45,11 +46,12 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="huas", value="chihuahua-gang-revenge"),
                 create_choice(name="luckymaneki", value="luckymaneki"),
                 create_choice(name="misfitU", value="misfit-university-official"),
+                create_choice(name="Punks Comic", value="punks-comic"),
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
                 create_choice(name="svins", value="svinsfarm"),
                 create_choice(name="Theos", value="theo-nft"),
                 create_choice(name="Wizards", value="forgottenruneswizardscult")
-                # Up to 14 choices
+                # Up to 16 choices
             ],
         ),
     ],
