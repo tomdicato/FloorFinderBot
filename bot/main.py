@@ -50,8 +50,9 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
                 create_choice(name="svins", value="svinsfarm"),
                 create_choice(name="Theos", value="theo-nft"),
-                create_choice(name="Wizards", value="forgottenruneswizardscult")
-                # Up to 16 choices
+                create_choice(name="Wizards", value="forgottenruneswizardscult"),
+                create_choice(name="Cool cats", value="cool-cats-nft")
+                # 17 choices
             ],
         ),
     ],
