@@ -48,7 +48,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Craniums", value="thewickedcraniums"),
                 create_choice(name="Deadheads", value="deadheads"),
                 create_choice(name="Gutter Cats", value="guttercatgang"),
-                create_choice(name="Hash Demons", value="hashdemons")
+                create_choice(name="Hash Demons", value="hashdemons"),
                 create_choice(name="Huas", value="chihuahua-gang-revenge"),
                 create_choice(name="Lucky Maneki", value="luckymaneki"),
                 create_choice(name="MisfitU", value="misfit-university-official"),
