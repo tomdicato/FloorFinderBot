@@ -47,6 +47,8 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Cool Cats", value="cool-cats-nft"),
                 create_choice(name="Craniums", value="thewickedcraniums"),
                 create_choice(name="Deadheads", value="deadheads"),
+                create_choice(name="Degenz", value="degenz"),
+                create_choice(name="Divine Order Of the Zodiac", value="divine-zodiac"),
                 create_choice(name="Gutter Cats", value="guttercatgang"),
                 create_choice(name="Hash Demons", value="hashdemons"),
                 create_choice(name="Huas", value="chihuahua-gang-revenge"),
@@ -54,10 +56,10 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="MisfitU", value="misfit-university-official"),
                 create_choice(name="Punks Comic", value="punks-comic"),
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
-                create_choice(name="Svins", value="svinsfarm"),
+                create_choice(name="Svins", value="svin"),
                 create_choice(name="Theos", value="theo-nft"),
                 create_choice(name="Wizards", value="forgottenruneswizardscult")
-                # 19 choices
+                # 21 choices
             ],
         ),
     ],
