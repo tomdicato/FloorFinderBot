@@ -49,6 +49,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Deadheads", value="deadheads"),
                 create_choice(name="Degenz", value="degenz"),
                 create_choice(name="Divine Order Of the Zodiac", value="divine-zodiac"),
+                create_choice(name="Goatz", value="maisondegoat"),
                 create_choice(name="Gutter Cats", value="guttercatgang"),
                 create_choice(name="Hash Demons", value="hashdemons"),
                 create_choice(name="Huas", value="chihuahua-gang-revenge"),
@@ -59,7 +60,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Svins", value="svin"),
                 create_choice(name="Theos", value="theo-nft"),
                 create_choice(name="Wizards", value="forgottenruneswizardscult")
-                # 21 choices
+                # 22 choices
             ],
         ),
     ],
