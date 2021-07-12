@@ -61,9 +61,8 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Svins", value="svinsfarm"),
                 create_choice(name="Theos", value="theo-nft"),
                 create_choice(name="Top Dog Beach Club", value="topdogbeachclub"),
-                create_choice(name="Untamed Elephants", value="untamed-elephants"),
                 create_choice(name="Wizards", value="forgottenruneswizardscult")
-                # 25 choices
+                # 24 choices
             ],
         ),
     ],
