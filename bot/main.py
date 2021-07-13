@@ -1,6 +1,4 @@
-import discord
 from discord.ext import commands
-from discord import guild
 from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_choice, create_option
 import requests
@@ -42,7 +40,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Aliens", value="thealienboy"),
                 create_choice(name="BAYC", value="boredapeyachtclub"),
                 create_choice(name="Blob Mob", value="blobmob"),
-                create_choice(name="BoringBananas", value="boring-bananas-company"),
+                create_choice(name="BoringBananas1", value="boring-bananas-company"),
                 create_choice(name="Bulls", value="bullsontheblock"),
                 create_choice(name="Cool Cats", value="cool-cats-nft"),
                 create_choice(name="Craniums", value="thewickedcraniums"),
@@ -82,7 +80,7 @@ async def floor_finder(
     )
 
     price = price.text.strip()
-
+    await ctx.defer()
     await ctx.send(f"{ project } floor is: { price }")
 
 
