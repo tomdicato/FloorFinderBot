@@ -16,16 +16,15 @@ token = os.getenv("FLOOR_BOT_TOKEN")
 @slash.slash(
     name="floorbot",
     description="Finds an OpenSea floor per project",
-    # guild_ids=[
-    #    # Dangywing Test Server
-    #    849034764190875669,
-    #    # Dangywing Test II
-    #    859966516761067532,
-    #    # club-nfts
-    #    812365773372129311,
-    #    # manzcoin-nftz
-    #    826820629260533790,
-    # ],
+    guild_ids=[
+        #    # Dangywing Test Server
+        849034764190875669
+        # ,
+        #    # club-nfts
+        #    812365773372129311,
+        #    # manzcoin-nftz
+        #    826820629260533790,
+    ],
     options=[
         create_option(
             name="project",
@@ -46,7 +45,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Craniums", value="thewickedcraniums"),
                 create_choice(name="Deadheads", value="deadheads"),
                 create_choice(name="Degenz", value="degenz"),
-                create_choice(name="Divine Order Of the Zodiac", value="divine-zodiac"),
+                create_choice(name="Fame Lady Squad", value="fameladysquad"),
                 create_choice(name="Goatz", value="maisondegoat"),
                 create_choice(name="Gutter Cats", value="guttercatgang"),
                 create_choice(name="Hash Demons", value="hashdemons"),
@@ -69,19 +68,29 @@ async def floor_finder(
     ctx: SlashContext,
     project: str,
 ):
+    await ctx.defer()
 
     url = f"https://opensea.io/assets/{ project }?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW"
-    page = requests.get(url)
 
-    soup = BeautifulSoup(page.content, "html.parser")
+    try:
+        page = requests.get(url)
 
-    price = soup.select_one(
-        ".AssetsSearchView--assets .dFhPys .dFhPys:nth-child(1) .gPOBwQ .AssetCardFooter--price-amount .Price--amount"
-    )
+        soup = BeautifulSoup(page.content, "html.parser")
 
-    price = price.text.strip()
-    await ctx.defer()
-    await ctx.send(f"{ project } floor is: { price }")
+        # price = soup.select_one(
+        #     ".AssetsSearchView--assets .dFhPys .dFhPys:nth-child(1) .gPOBwQ .AssetCardFooter--price-amount .Price--amount"
+        # )
+
+        price = soup.select_one(".Price--amount")
+
+        price = price.text.strip()
+
+    except:
+        print(f"Error getting price for { url }")
+
+    else:
+
+        await ctx.send(f"{ project } floor is: { price }")
 
 
 client.run(token)
