@@ -68,7 +68,7 @@ async def floor_finder(
     ctx: SlashContext,
     project: str,
 ):
-    await ctx.defer()
+    await ctx.defer(hidden=True)
 
     url = f"https://opensea.io/assets/{ project }?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW"
 
