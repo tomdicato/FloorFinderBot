@@ -44,6 +44,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Chickens", value="chicken-derby"),
                 create_choice(name="Cool Cats", value="cool-cats-nft"),
                 create_choice(name="Craniums", value="thewickedcraniums"),
+                create_choice(name="Elephants", value="assets/untamed-elephants"),
                 create_choice(name="Deadheads", value="deadheads"),
                 # create_choice(name="Degenz", value="degenz"),
                 create_choice(name="Fame Lady Squad", value="fameladysquad"),
