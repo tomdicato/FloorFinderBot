@@ -57,6 +57,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Meebits", value="meebits"),
                 # create_choice(name="MisfitU", value="misfit-university-official"),
                 create_choice(name="Pills", value="byopills"),
+                create_choice(name="Pudgy Penguins", value="pudgypenguins"),
                 create_choice(name="Punks Comic", value="punks-comic"),
                 create_choice(name="Rabbits", value="rabbit-college-club"),
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
