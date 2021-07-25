@@ -37,6 +37,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                     value="manzcoin-nftz",
                 ),
                 create_choice(name="Aliens", value="thealienboy"),
+                create_choice(name="Animonkeys", value="animonkeys"),
                 create_choice(name="BAYC", value="boredapeyachtclub"),
                 create_choice(name="Blob Mob", value="blobmob"),
                 # create_choice(name="BoringBananas1", value="boring-bananas-company"),
