@@ -61,6 +61,10 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Pudgy Penguins", value="pudgypenguins"),
                 create_choice(name="Punks Comic", value="punks-comic"),
                 create_choice(name="Rabbits", value="rabbit-college-club"),
+                create_choice(
+                    name="Royal Society of Players (RSOP)",
+                    value="royalsocietyofplayers",
+                ),
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
                 # create_choice(name="Svins", value="svinsfarm"),
                 create_choice(name="Theos", value="theo-nft"),
