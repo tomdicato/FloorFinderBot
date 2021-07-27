@@ -55,9 +55,9 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 # create_choice(name="Hash Demons", value="hashdemons"),
                 create_choice(name="Huas", value="chihuahua-gang-revenge"),
                 create_choice(name="Lucky Maneki", value="luckymaneki"),
-                create_choice(name="Meebits", value="meebits"),
+                # create_choice(name="Meebits", value="meebits"),
                 # create_choice(name="MisfitU", value="misfit-university-official"),
-                create_choice(name="Pills", value="byopills"),
+                # create_choice(name="Pills", value="byopills"),
                 create_choice(name="Pudgy Penguins", value="pudgypenguins"),
                 create_choice(name="Punks Comic", value="punks-comic"),
                 create_choice(name="Rabbits", value="rabbit-college-club"),
@@ -66,12 +66,12 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                     value="royalsocietyofplayers",
                 ),
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
+                create_choice(name="Stoner Cats", value="stoner-cats-official"),
                 # create_choice(name="Svins", value="svinsfarm"),
                 create_choice(name="Theos", value="theo-nft"),
                 create_choice(name="Vogu", value="vogu"),
-                create_choice(name="Whales", value="recklesswhales"),
-                create_choice(name="Wizards", value="forgottenruneswizardscult")
-                # 24 choices
+                #create_choice(name="Whales", value="recklesswhales"),
+                create_choice(name="Wizards", value="forgottenruneswizardscult")                
             ],
         ),
     ],
