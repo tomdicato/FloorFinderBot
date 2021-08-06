@@ -50,7 +50,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
             ],
         ),
         create_option(
-            name="project-e-z",
+            name="projectse-z",
             description="Projects starting with E-Z",
             required=False,
             option_type=3,
@@ -84,33 +84,28 @@ token = os.getenv("FLOOR_BOT_TOKEN")
         ),
     ],
 )
-async def floor_finder(
-    ctx: SlashContext,
-    project: str,
-):
-    await ctx.defer(hidden=False)
+async def floor_finder(ctx: SlashContext, **kwargs):
 
-    url = f"https://opensea.io/assets/{ project }?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW"
+    for project in kwargs.values():
+        await ctx.defer(hidden=False)
 
-    try:
-        page = requests.get(url)
+        url = f"https://opensea.io/assets/{ project }?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW"
 
-        soup = BeautifulSoup(page.content, "html.parser")
+        try:
+            page = requests.get(url)
 
-        # price = soup.select_one(
-        #     ".AssetsSearchView--assets .dFhPys .dFhPys:nth-child(1) .gPOBwQ .AssetCardFooter--price-amount .Price--amount"
-        # )
+            soup = BeautifulSoup(page.content, "html.parser")
 
-        price = soup.select_one(".Price--amount")
+            price = soup.select_one(".Price--amount")
 
-        price = price.text.strip()
+            price = price.text.strip()
 
-    except:
-        print(f"Error getting price for { url }")
+        except:
+            print(f"Error getting price for { url }")
 
-    else:
+        else:
 
-        await ctx.send(f"{ project } floor is: { price }")
+            await ctx.send(f"{ project } floor is: { price }")
 
 
 client.run(token)
