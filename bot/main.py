@@ -27,9 +27,9 @@ token = os.getenv("FLOOR_BOT_TOKEN")
     # ],
     options=[
         create_option(
-            name="project",
-            description="Choose the project",
-            required=True,
+            name="projectsa-d",
+            description="Projects starting with A-D",
+            required=False,
             option_type=3,
             choices=[
                 create_choice(
@@ -47,7 +47,14 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Craniums", value="thewickedcraniums"),
                 create_choice(name="Elephants", value="untamed-elephants"),
                 create_choice(name="Deadheads", value="deadheads"),
-                # create_choice(name="Degenz", value="degenz"),
+            ],
+        ),
+        create_option(
+            name="project-e-z",
+            description="Projects starting with E-Z",
+            required=False,
+            option_type=3,
+            choices=[
                 create_choice(name="Fame Lady Squad", value="fameladysquad"),
                 create_choice(name="Goblin Goons", value="goblin-goons"),
                 create_choice(name="Goatz", value="maisondegoat"),
@@ -58,6 +65,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 # create_choice(name="Meebits", value="meebits"),
                 # create_choice(name="MisfitU", value="misfit-university-official"),
                 # create_choice(name="Pills", value="byopills"),
+                create_choice(name="Meebits", value="meebits"),
                 create_choice(name="Pudgy Penguins", value="pudgypenguins"),
                 create_choice(name="Punks Comic", value="punks-comic"),
                 create_choice(name="Rabbits", value="rabbit-college-club"),
@@ -70,8 +78,8 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 # create_choice(name="Svins", value="svinsfarm"),
                 create_choice(name="Theos", value="theo-nft"),
                 create_choice(name="Vogu", value="vogu"),
-                #create_choice(name="Whales", value="recklesswhales"),
-                create_choice(name="Wizards", value="forgottenruneswizardscult")                
+                # create_choice(name="Whales", value="recklesswhales"),
+                create_choice(name="Wizards", value="forgottenruneswizardscult"),
             ],
         ),
     ],
