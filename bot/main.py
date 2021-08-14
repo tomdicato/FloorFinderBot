@@ -84,6 +84,9 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Shibas", value="dope-shibas"),
                 create_choice(name="Slacker Ducks", value="slacker-duck-pond"),
                 create_choice(name="Space Poggers", value="spacepoggers"),
+                create_choice(
+                    name="SSS - Star Sailor Siblings", value="starsailorsiblings"
+                ),
                 create_choice(name="Stoner Cats", value="stoner-cats-official"),
                 create_choice(name="Strippers", value="stripperville-nfts"),
                 create_choice(name="Theos", value="theo-nft"),
@@ -92,7 +95,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                 create_choice(name="Vox", value="collectvox"),
                 create_choice(name="Wizards", value="forgottenruneswizardscult"),
                 create_choice(name="World of Women", value="world-of-women-nft"),
-                create_choice(name="Crypto Zunks", value="zunks"),
+                create_choice(name="Zunks", value="zunks"),
             ],
         ),
     ],
