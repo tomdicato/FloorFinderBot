@@ -17,7 +17,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
 
 
 @slash.slash(
-    name="floorbot2.0",
+    name="floorbot2",
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
@@ -216,7 +216,9 @@ async def floor_finder(ctx: SlashContext, **kwargs):
             url="https://opensea.io/assets/" + str(collection_slug),
         )
         embed.set_author(
-            name = str(collection_slug) + " Floor Price: " + str(floor_price) + " ETH", url="", icon_url=""
+            name=str(collection_slug) + " Floor Price: " + str(floor_price) + " ETH",
+            url="",
+            icon_url="",
         )
         embed.set_footer(
             text="Data provided by OpenSea",
