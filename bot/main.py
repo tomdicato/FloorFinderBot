@@ -23,9 +23,9 @@ token = os.getenv("FLOOR_BOT_TOKEN")
         #    # Dangywing Test Server
         849034764190875669,
         # club-ngmi
-        888513307147927612
-        #    # manzcoin-nftz
-        #    826820629260533790,
+        888513307147927612,
+        # NY TOKEN
+        879467693986676776,
     ],
     options=[
         create_option(
