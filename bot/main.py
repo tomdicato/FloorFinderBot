@@ -25,7 +25,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
         # clubngmi test
         889931825730957363,
         # club-ngmi
-        888513307147927612,
+        889600013150355486,
     ],
     options=[
         create_option(
