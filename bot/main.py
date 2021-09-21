@@ -21,11 +21,11 @@ token = os.getenv("FLOOR_BOT_TOKEN")
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
-        849034764190875669,
+        # 849034764190875669,
+        # clubngmi test
+        889931825730957363,
         # club-ngmi
         888513307147927612,
-        # NY TOKEN
-        879467693986676776,
     ],
     options=[
         create_option(
