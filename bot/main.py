@@ -201,9 +201,9 @@ async def floor_finder(ctx: SlashContext, **kwargs):
     for CONTRACT_ADDRESS in kwargs.values():
         await ctx.defer(hidden=False)
 
-        CONTRACT_ADDRESS = "0x6d05064fe99e40F1C3464E7310A23FFADed56E20"
+        # CONTRACT_ADDRESS = "0x6d05064fe99e40F1C3464E7310A23FFADed56E20"
 
-        print(CONTRACT_ADDRESS)
+        # print(CONTRACT_ADDRESS)
 
         data_url = f"https://api.opensea.io/api/v1/asset/{ str(CONTRACT_ADDRESS) }/1"
         response = requests.get(data_url)
@@ -216,7 +216,7 @@ async def floor_finder(ctx: SlashContext, **kwargs):
             url="https://opensea.io/assets/" + str(collection_slug),
         )
         embed.set_author(
-            name="Floor Price: " + str(floor_price) + " ETH", url="", icon_url=""
+            name = str(collection_slug) + " Floor Price: " + str(floor_price) + " ETH", url="", icon_url=""
         )
         embed.set_footer(
             text="Data provided by OpenSea",
