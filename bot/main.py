@@ -17,11 +17,11 @@ token = os.getenv("FLOOR_BOT_TOKEN")
 
 
 @slash.slash(
-    name="floorbot22",
+    name="floorbotngmi",
     description="Finds an OpenSea floor per project",
     guild_ids=[
         # club-ngmi
-        889600013150355486,
+        # 889600013150355486,
         #    # Dangywing Test Server
         # 849034764190875669,
         # clubngmi test
