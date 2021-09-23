@@ -14,14 +14,14 @@ token = os.getenv("FLOOR_BOT_TOKEN")
 
 
 @slash.slash(
-    name="floorbot",
+    name="floorbot2",
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
-        849034764190875669
+        849034764190875669,
         # ,
         #    # club-nfts
-        #    812365773372129311,
+        812365773372129311,
         #    # manzcoin-nftz
         #    826820629260533790,
     ],
@@ -37,7 +37,7 @@ token = os.getenv("FLOOR_BOT_TOKEN")
                     value="manzcoin-nftz",
                 ),
                 create_choice(name="Aliens", value="thealienboy"),
-                create_choice(name="Alphabettys", value="alphabetty-doodles"),
+                create_choice(name="Alphabettys", value="0x6d05064fe99e40F1C3464E7310A23FFADed56E20"),
                 create_choice(name="Animetas", value="animetas"),
                 create_choice(name="Animonkeys", value="animonkeys"),
                 create_choice(name="Avastar", value="avastar"),
@@ -105,7 +105,7 @@ async def floor_finder(ctx: SlashContext, **kwargs):
     for CONTRACT_ADDRESS in kwargs.values():
         await ctx.defer(hidden=False)
 
-        CONTRACT_ADDRESS = "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0"
+        # CONTRACT_ADDRESS = "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0"
 
         data_url = "https://api.opensea.io/api/v1/asset/" + str(CONTRACT_ADDRESS) + "/1"
         response = requests.get(data_url)
