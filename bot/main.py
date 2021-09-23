@@ -51,11 +51,11 @@ def format_int_value(value, padding=17):
         849034764190875669,
         # ,
         #    # club-nfts
-        812365773372129311,
+        # 812365773372129311,
         #    # manzcoin-nftz
         #    826820629260533790,
-        # club-ngmi
-        # 88513307147927612
+        # Deposit Kingdom
+        762763149728153601
     ],
     options=[
         create_option(
