@@ -54,6 +54,8 @@ def format_int_value(value, padding=17):
         812365773372129311,
         #    # manzcoin-nftz
         #    826820629260533790,
+        # club-ngmi
+        888513307147927612
     ],
     options=[
         create_option(
