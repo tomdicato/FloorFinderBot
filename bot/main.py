@@ -199,59 +199,62 @@ create_choice(name="Zunks", value = '0x031920cc2D9F5c10B444FD44009cd64F829E7be2'
     ],
 )
 async def floor(ctx: SlashContext, **kwargs):
-    data_url = "https://api.opensea.io/api/v1/asset/" + str(CONTRACT_ADDRESS) + "/1"
-    response = requests.get(data_url)
-    json_data = response.json()
+
+    for CONTRACT_ADDRESS in kwargs.values():
+        await ctx.defer(hidden=False)
+        data_url = "https://api.opensea.io/api/v1/asset/" + str(CONTRACT_ADDRESS) + "/1"
+        response = requests.get(data_url)
+        json_data = response.json()
 
     # print(json_data)
-    collection = json_data["collection"]
-    collection_slug = collection.get("slug")
-    collection_name = collection.get("name")
-    stats = collection.get("stats")
-    embed = Embed(
-        title=str(collection_name) + " Collection (__View__)",
-        type="rich",
-        url="https://opensea.io/assets/" + str(collection_slug),
-    )
-    embed.add_field(
-        name="__# of Owners__",
-        value=format_int_value(stats.get("num_owners")),
-        inline="true",
-    )
-    embed.add_field(
-        name="__Total Supply__",
-        value=format_int_value(stats.get("total_supply")),
-        inline="true",
-    )
-    embed.add_field(
-        name="__Total Sales__",
-        value=format_int_value(stats.get("total_sales")),
-        inline="true",
-    )
+        collection = json_data["collection"]
+        collection_slug = collection.get("slug")
+        collection_name = collection.get("name")
+        stats = collection.get("stats")
+        embed = Embed(
+           title=str(collection_name) + " Collection (__View__)",
+            type="rich",
+            url="https://opensea.io/assets/" + str(collection_slug),
+        )
+        embed.add_field(
+            name="__# of Owners__",
+            value=format_int_value(stats.get("num_owners")),
+            inline="true",
+        )
+        embed.add_field(
+            name="__Total Supply__",
+            value=format_int_value(stats.get("total_supply")),
+            inline="true",
+        )
+        embed.add_field(
+            name="__Total Sales__",
+            value=format_int_value(stats.get("total_sales")),
+            inline="true",
+        )
 
-    embed.add_field(
+        embed.add_field(
         name="__Floor Price__ ",
         value=format_activity_value(stats.get("floor_price")),
         inline="true",
-    )
-    embed.add_field(
+        )
+        embed.add_field(
         name="__Average Price__",
         value=format_activity_value(stats.get("average_price")),
         inline="true",
-    )
-    embed.add_field(
+        )
+        embed.add_field(
         name="__Total Volumne__",
         value=format_activity_value(stats.get("total_volume")),
         inline="true",
-    )
+        )
 
-    activity_section = get_activity_section(stats)
-    embed.add_field(name="Sales Activity", value=activity_section, inline="false")
-    embed.set_footer(
+        activity_section = get_activity_section(stats)
+        embed.add_field(name="Sales Activity", value=activity_section, inline="false")
+        embed.set_footer(
         text="Data provided by OpenSea",
         icon_url="https://storage.googleapis.com/opensea-static/Logomark/Logomark-Blue.png",
-    )
-    await ctx.send(embed=embed)
+        )
+        await ctx.send(embed=embed)
 
 
 client.run(token)
