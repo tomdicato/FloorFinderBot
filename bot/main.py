@@ -44,7 +44,7 @@ def format_int_value(value, padding=17):
 
 
 @slash.slash(
-    name="floorbot2",
+    name="floorbot",
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
