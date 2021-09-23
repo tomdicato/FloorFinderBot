@@ -20,12 +20,12 @@ token = os.getenv("FLOOR_BOT_TOKEN")
     name="floorbot22",
     description="Finds an OpenSea floor per project",
     guild_ids=[
-        # club-ngmi
-        889600013150355486,
         #    # Dangywing Test Server
         # 849034764190875669,
         # clubngmi test
         889931825730957363,
+        # club-ngmi
+        889600013150355486,
     ],
     options=[
         create_option(
