@@ -12,6 +12,28 @@ client = commands.Bot(command_prefix="!")
 slash = SlashCommand(client, sync_commands=True)
 token = os.getenv("FLOOR_BOT_TOKEN")
 
+def format_activity_value(value, currency="", padding=17):
+    formatted_value="0.0"
+    if isinstance(value, float):
+      formatted_value = str(round(value, 2))
+    else:
+        formatted_value = str(value)
+
+    if currency == "DAI":
+      formatted_value = formatted_value + " "
+    elif currency == "USDC":
+      formatted_value = formatted_value + " "
+    elif formatted_value != "":
+      formatted_value = formatted_value + " ⧫"      
+    formatted_value = formatted_value.rjust(padding, " ") 
+    
+    return formatted_value
+
+def format_int_value(value, padding=17):
+    formatted_value="0.0"
+    formatted_value = str(int(value)).rjust(padding, " ") 
+    return formatted_value
+
 
 @slash.slash(
     name="floorbot2",
