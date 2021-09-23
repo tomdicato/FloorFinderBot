@@ -48,7 +48,7 @@ def format_int_value(value, padding=17):
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
-        849034764190875669,
+        # 849034764190875669,
         # ,
         #    # club-nfts
         # 812365773372129311,
