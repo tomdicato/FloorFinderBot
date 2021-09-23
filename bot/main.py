@@ -150,7 +150,7 @@ async def floor_finder(ctx: SlashContext, **kwargs):
 
 
 @slash.slash(
-    name="stats",
+    name="project stats",
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
