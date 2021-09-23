@@ -26,7 +26,6 @@ def format_activity_value(value, currency="", padding=17):
       formatted_value = str(round(value, 2))
     else:
         formatted_value = str(value)
-
     if currency == "DAI":
       formatted_value = formatted_value + " "
     elif currency == "USDC":
@@ -64,8 +63,6 @@ def format_int_value(value, padding=17):
             required=False,
             option_type=3,
             choices=[
-                create_choice(name="Digital Represenation of a physical cryptocurrency aka the Manzcoin NFTz", value = '0x495f947276749Ce646f68AC8c248420045cb7b5e'),
-create_choice(name="Aliens", value = '0x4581649aF66BCCAeE81eebaE3DDc0511FE4C5312'),
 create_choice(name="Alphabettys", value = '0x6d05064fe99e40F1C3464E7310A23FFADed56E20'),
 create_choice(name="Animetas", value = '0x18Df6C571F6fE9283B87f910E41dc5c8b77b7da5'),
 create_choice(name="Animonkeys", value = '0xA32422dfb5bF85B2084EF299992903eb93FF52B0'),
@@ -87,7 +84,7 @@ create_choice(name="Goatz", value = '0x3EAcf2D8ce91b35c048C6Ac6Ec36341aaE002FB9'
 create_choice(name="Gutter Cats", value = '0xEdB61f74B0d09B2558F1eeb79B247c1F363Ae452'),
 create_choice(name="Huas", value = '0x495f947276749Ce646f68AC8c248420045cb7b5e'),
 create_choice(name="Lazy Lions", value = '0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0'),
-create_choice(name="Lucky Maneki", value = '0x14f03368B43E3a3D27d45F84FabD61Cc07EA5da3'),
+create_choice(name="Lucky Maneki", value = '0x14f03368B43E3a3D27d45F84FabD61Cc07EA5da3')
 
             ],
         ),
@@ -126,8 +123,6 @@ async def floor_finder(ctx: SlashContext, **kwargs):
 
     for CONTRACT_ADDRESS in kwargs.values():
         await ctx.defer(hidden=False)
-
-        # CONTRACT_ADDRESS = "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0"
 
         data_url = "https://api.opensea.io/api/v1/asset/" + str(CONTRACT_ADDRESS) + "/1"
         response = requests.get(data_url)
@@ -222,6 +217,7 @@ create_choice(name="SSS - Star Sailor Siblings", value = '0x49aC61f2202f6A2f108D
 create_choice(name="Stoner Cats", value = '0xD4d871419714B778eBec2E22C7c53572b573706e'),
 create_choice(name="Strippers", value = '0x9808226ED04e92F9380DA67C5606354FAe5891b0'),
 create_choice(name="Theos", value = '0x9E02FFd6643f51aaAFa0f0E2a911Bf25EF2684Cb'),
+create_choice(name="Time", value = '0xdd69da9a83cedc730bc4d3c56e96d29acc05ecde'),
 create_choice(name="Top Dog Beach Club", value = '0x6F0365ca2c1Dd63473F898A60f878A07e0f68A26'),
 create_choice(name="Vogu", value = '0x18c7766A10df15Df8c971f6e8c1D2bbA7c7A410b'),
 create_choice(name="Vox", value = '0xad9Fd7cB4fC7A0fBCE08d64068f60CbDE22Ed34C'),
