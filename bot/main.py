@@ -12,6 +12,14 @@ client = commands.Bot(command_prefix="!")
 slash = SlashCommand(client, sync_commands=True)
 token = os.getenv("FLOOR_BOT_TOKEN")
 
+def get_activity_section(stats):
+     output = "```Range         Volume           Change          Average  \n"
+     output = output + "1D".ljust(5, " ") + format_activity_value(stats.get("one_day_volume")) + format_activity_value(stats.get("one_day_change")) + format_activity_value(stats.get("one_day_average_price"))  +"\n"
+     output = output + "7D".ljust(5, " ") + format_activity_value(stats.get("seven_day_volume"))  + format_activity_value(stats.get("seven_day_change"))   + format_activity_value(stats.get("seven_day_average_price"))  +"\n"
+     output = output + "30D".ljust(5, " ") + format_activity_value(stats.get("thirty_day_volume"))  + format_activity_value(stats.get("thirty_day_change"))  + format_activity_value(stats.get("thirty_day_average_price"))  +"\n"
+     output = output + "Total" + format_activity_value(stats.get("total_volume"))  + format_activity_value("") + format_activity_value(stats.get("average_price")) + "```"
+     return output
+
 def format_activity_value(value, currency="", padding=17):
     formatted_value="0.0"
     if isinstance(value, float):
