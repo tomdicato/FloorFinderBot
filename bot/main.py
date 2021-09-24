@@ -44,7 +44,7 @@ def format_int_value(value, padding=17):
 
 @slash.slash(
     name="floorbot",
-    description="Finds an OpenSea floor per project",
+    description="Finds OpenSea floor",
     guild_ids=[
         #    # Dangywing Test Server
         849034764190875669,
@@ -53,8 +53,8 @@ def format_int_value(value, padding=17):
         # 812365773372129311,
         #    # manzcoin-nftz
         #    826820629260533790,
-        # Deposit Kingdom
-        762763149728153601
+        # club-ngmi
+        888513307147927612
      ],
     options=[
         create_option(
@@ -145,7 +145,7 @@ async def floor_finder(ctx: SlashContext, **kwargs):
 
 
 @slash.slash(
-    name="project stats",
+    name="projectstats",
     description="Finds an OpenSea floor per project",
     guild_ids=[
         #    # Dangywing Test Server
@@ -155,8 +155,8 @@ async def floor_finder(ctx: SlashContext, **kwargs):
         # 812365773372129311,
         #    # manzcoin-nftz
         #    826820629260533790,
-        # Deposit Kingdom
-        762763149728153601
+        # club-ngmi
+        888513307147927612
      ],
     options=[
         create_option(
