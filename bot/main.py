@@ -89,7 +89,7 @@ create_choice(name="Lucky Maneki", value = '0x14f03368B43E3a3D27d45F84FabD61Cc07
             ],
         ),
         create_option(
-            name="projects-M-z",
+            name="projects-m-z",
             description="Projects starting with M-Z",
             required=False,
             option_type=3,
