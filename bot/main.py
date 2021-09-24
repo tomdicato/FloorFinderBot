@@ -58,8 +58,8 @@ def format_int_value(value, padding=17):
      ],
     options=[
         create_option(
-            name="projects-a-h",
-            description="Projects starting with A-H",
+            name="projects-a-l",
+            description="Projects starting with A-L",
             required=False,
             option_type=3,
             choices=[
@@ -89,8 +89,8 @@ create_choice(name="Lucky Maneki", value = '0x14f03368B43E3a3D27d45F84FabD61Cc07
             ],
         ),
         create_option(
-            name="projects-l-z",
-            description="Projects starting with L-Z",
+            name="projects-M-z",
+            description="Projects starting with M-Z",
             required=False,
             option_type=3,
             choices=[
