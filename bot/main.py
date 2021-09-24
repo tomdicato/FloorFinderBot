@@ -1,3 +1,4 @@
+from typing_extensions import Required
 from discord.ext import commands
 from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_choice, create_option
@@ -58,6 +59,12 @@ def format_int_value(value, padding=17):
      ],
     options=[
         create_option(
+            name = "customcontract",
+            description="Paste a contract address here",
+            required=False,
+            option_type=3
+        ),
+        create_option(
             name="projects-a-l",
             description="Projects starting with A-L",
             required=False,
@@ -72,18 +79,20 @@ create_choice(name="Bears On The Block", value = '0x02AA731631c6D7F8241d74F906f5
 create_choice(name="Bulls", value = '0x3a8778A58993bA4B941f85684D74750043A4bB5f'),
 create_choice(name="Chickens", value = '0x8634666bA15AdA4bbC83B9DbF285F73D9e46e4C2'),
 create_choice(name="Cool Cats", value = '0x1A92f7381B9F03921564a437210bB9396471050C'),
-create_choice(name="Craniums", value = '0x85f740958906b317de6ed79663012859067E745B'),
+# create_choice(name="Craniums", value = '0x85f740958906b317de6ed79663012859067E745B'),
 create_choice(name="Deadheads", value = '0x6fC355D4e0EE44b292E50878F49798ff755A5bbC'),
-create_choice(name="Elephants", value = '0x613E5136a22206837D12eF7A85f7de2825De1334'),
-create_choice(name="Flufs", value = '0xCcc441ac31f02cD96C153DB6fd5Fe0a2F4e6A68d'),
+# create_choice(name="Elephants", value = '0x613E5136a22206837D12eF7A85f7de2825De1334'),
+# create_choice(name="Flufs", value = '0xCcc441ac31f02cD96C153DB6fd5Fe0a2F4e6A68d'),
 create_choice(name="FVCK_CRYSTALS", value = '0x7AfEdA4c714e1C0A2a1248332c100924506aC8e6'),
-create_choice(name="Ethlings", value = '0x8A1AbD2E227Db543F4228045dd0aCF658601fedE'),
+#create_choice(name="Ethlings", value = '0x8A1AbD2E227Db543F4228045dd0aCF658601fedE'),
 create_choice(name="Fame Lady Squad", value = '0xf3E6DbBE461C6fa492CeA7Cb1f5C5eA660EB1B47'),
-create_choice(name="Goblin Goons", value = '0x6322834FE489003512A61662044BcFb5Eeb2A035'),
-create_choice(name="Goatz", value = '0x3EAcf2D8ce91b35c048C6Ac6Ec36341aaE002FB9'),
+#create_choice(name="Goblin Goons", value = '0x6322834FE489003512A61662044BcFb5Eeb2A035'),
+#create_choice(name="Goatz", value = '0x3EAcf2D8ce91b35c048C6Ac6Ec36341aaE002FB9'),
+create_choice(name = "Gen.Art", value='0x1ca39c7f0f65b4da24b094a9afac7acf626b7f38'),
 create_choice(name="Gutter Cats", value = '0xEdB61f74B0d09B2558F1eeb79B247c1F363Ae452'),
-create_choice(name="Huas", value = '0x495f947276749Ce646f68AC8c248420045cb7b5e'),
+# create_choice(name="Huas", value = '0x495f947276749Ce646f68AC8c248420045cb7b5e'),
 create_choice(name="Lazy Lions", value = '0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0'),
+create_choice(name="Lost Pages", value = '0xa7206d878c5c3871826dfdb42191c49b1d11f466'),
 create_choice(name="Lucky Maneki", value = '0x14f03368B43E3a3D27d45F84FabD61Cc07EA5da3')
 
             ],
